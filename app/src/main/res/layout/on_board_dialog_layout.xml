@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ripple_motion_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/on_board_dialog_layout_scene">
+
+    <View
+        android:id="@+id/outer_ring"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/on_board_popup_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/inner_ring"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/on_board_pop_up_inner_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/ripple_ring"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:alpha="0.05"
+        android:background="@drawable/on_board_pop_up_ripple_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/transparent_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="13dp"
+        app:srcCompat="@drawable/ic_menu_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="@id/outer_ring"
+        app:layout_constraintStart_toEndOf="@id/outer_ring"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+
+        />
+
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
