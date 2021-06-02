@@ -8,7 +8,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        OnBoardDialogFragment.newInstance("Navigate the Application").show(supportFragmentManager, "TAG")
+        OnBoardDialogFragment.newInstance("Any Description").show(supportFragmentManager, "TAG")
 
 
     }
