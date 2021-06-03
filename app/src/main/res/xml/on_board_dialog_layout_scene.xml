@@ -2,7 +2,7 @@
 <MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ConstraintSet android:id="@+id/first" >
+    <ConstraintSet android:id="@+id/first_set" >
 
         <Constraint
             android:id="@+id/outer_ring"
@@ -10,15 +10,16 @@
             android:layout_height="150dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:scaleX="1"
             android:scaleY="1"
             />
 
-
     </ConstraintSet>
 
 
-    <ConstraintSet android:id="@+id/second" >
+    <ConstraintSet android:id="@+id/second_set" >
 
         <Constraint
             android:id="@+id/outer_ring"
@@ -26,6 +27,8 @@
             android:layout_height="150dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:scaleX="3.5"
             android:scaleY="3.5"
             />
@@ -42,6 +45,8 @@
             android:layout_height="50dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:scaleX="1.5"
             android:scaleY="1.5"
             />
@@ -49,7 +54,7 @@
 
 
 
-    <ConstraintSet android:id="@+id/third" >
+    <ConstraintSet android:id="@+id/third_set" >
 
         <Constraint
             android:id="@+id/outer_ring"
@@ -57,6 +62,8 @@
             android:layout_height="150dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:scaleX="3.5"
             android:scaleY="3.5"
             />
@@ -73,7 +80,7 @@
     </ConstraintSet>
 
 
-    <ConstraintSet android:id="@+id/fourth" >
+    <ConstraintSet android:id="@+id/fourth_set" >
 
         <Constraint
             android:id="@+id/outer_ring"
@@ -81,6 +88,8 @@
             android:layout_height="150dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:scaleX="3.5"
             android:scaleY="3.5"
             />
@@ -91,6 +100,8 @@
             android:layout_height="50dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:scaleX="1.5"
             android:scaleY="1.5"
             />
@@ -101,6 +112,8 @@
             android:layout_height="60dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:scaleX="2.5"
             android:scaleY="2.5"
             app:transitionEasing="accelerate"
@@ -116,15 +129,15 @@
 
 
     <Transition
-        app:constraintSetStart="@+id/first"
-        app:constraintSetEnd="@+id/second"
+        app:constraintSetStart="@+id/first_set"
+        app:constraintSetEnd="@+id/second_set"
         app:autoTransition="animateToEnd"
         app:duration="1000"
         app:motionInterpolator="easeOut" />
 
     <Transition
-        app:constraintSetStart="@+id/second"
-        app:constraintSetEnd="@+id/third"
+        app:constraintSetStart="@+id/second_set"
+        app:constraintSetEnd="@+id/third_set"
         app:autoTransition="animateToEnd"
         app:duration="300"
         />
@@ -132,15 +145,15 @@
 
 
     <Transition
-        app:constraintSetStart="@+id/third"
-        app:constraintSetEnd="@+id/fourth"
+        app:constraintSetStart="@+id/third_set"
+        app:constraintSetEnd="@+id/fourth_set"
         app:autoTransition="animateToEnd"
         app:duration="500"
         />
 
     <Transition
-        app:constraintSetStart="@+id/second"
-        app:constraintSetEnd="@+id/fourth"
+        app:constraintSetStart="@+id/second_set"
+        app:constraintSetEnd="@+id/fourth_set"
         app:autoTransition="jumpToStart"
         app:duration="500" />
 
