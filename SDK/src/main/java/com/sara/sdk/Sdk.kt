@@ -2,7 +2,13 @@ package com.sara.sdk
 
 class Sdk {
 
-    public fun testSdk( a: Int ,b: Int ): Int{
-        return a+b
+    companion object{
+
+        @JvmStatic
+        fun testSdk( a: Int ,b: Int ): Int{
+            return a+b
+        }
     }
+    
+
 }
