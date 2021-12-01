@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'maven-publish'
+
 
 android {
     compileSdkVersion 30
@@ -43,16 +43,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            // Creates a Maven publication called "release".
-            release(MavenPublication) {
-                groupId = 'com.github.saravananh977'
-                artifactId = 'onBoarding-WithMotionLayout'
-                version = '1.0'
-            }
-        }
-    }
-}
+
 
