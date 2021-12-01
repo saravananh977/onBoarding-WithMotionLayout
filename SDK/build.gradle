@@ -2,6 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'maven-publish'
 group = 'com.github.saravananh977'
+apply plugin: 'com.github.dcendents.android-maven'
 
 android {
     compileSdkVersion 30
