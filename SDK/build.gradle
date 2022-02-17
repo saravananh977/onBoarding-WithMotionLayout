@@ -49,7 +49,7 @@ afterEvaluate {
             release(MavenPublication) {
                 groupId = 'com.github.saravananh977'
                 artifactId = 'onBoarding-WithMotionLayout'
-                version = '1.0'
+                version = '1.1'
             }
         }
     }
